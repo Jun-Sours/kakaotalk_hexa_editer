@@ -1,0 +1,1 @@
+# kakaotalk_hexa_editer
