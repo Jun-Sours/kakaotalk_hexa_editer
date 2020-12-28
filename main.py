@@ -3,18 +3,17 @@
 import json
 import requests
 
-url = "https://kapi.kakao.com/v2/api/talk/memo/default/send"
-user_token ="ZX-TmIs1Eny9RtR9Ni1J58h2x7cN71VTLy32OAopyV8AAAF2pUes_w"
+url = "https://kapi.kakao.com/v2/api/talk/memo/send?template_id=43550"
+user_token ="HYjzYyczoZIvZ47xeAimjc6p7pwMGK8PzjRbWQopcBMAAAF2p9958g"
 # 사용자 토큰
 headers = {
     "Authorization": "Bearer " + user_token
 }
 
 payload = {
-    "template_object" : {"object_type": "feed"},
-    "template_id" : {43551},
-    "template_arg" : '{"name":"안녕하세요."}'
-    }
+    'template_id' : {43550},
+    'template_args' : '{"name": "테스트 제목"}'
+}
 # 카카오톡 메시지 전송
 response = requests.post(url, headers=headers, data=payload)
 print(response.status_code)
