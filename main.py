@@ -2,7 +2,7 @@
 
 import json
 import requests
-"""
+
 url = "https://kapi.kakao.com/v2/api/talk/memo/send?template_id=43550"
 user_token ="HYjzYyczoZIvZ47xeAimjc6p7pwMGK8PzjRbWQopcBMAAAF2p9958g"
 # 사용자 토큰
@@ -21,7 +21,7 @@ if response.json().get('result_code') == 0:
     print('메시지를 성공적으로 보냈습니다.')
 else:
     print('메시지를 성공적으로 보내지 못했습니다. 오류메시지 : ' + str(response.json()))
-"""
+
 
 text_message = input()
 
