@@ -4,7 +4,7 @@ import json
 import requests
 
 url = "https://kapi.kakao.com/v2/api/talk/memo/send?template_id=43550"
-user_token ="kz5Jl0imG1rz5ChCJQgblMMMjjcFZRjaxhV1ewo9cxcAAAF2zb6iUQ"
+user_token ="b27c9b98fc8ac23154dfd49dafe25217"
 # 사용자 토큰
 headers = {
     "Authorization": "Bearer " + user_token
@@ -13,7 +13,7 @@ headers = {
 def mesaage_box(hex_message):
     payload = {
         'template_id' : {43550},
-        'template_args' : '{"name": 'hex_message'}'
+        'template_args' : {'${text}': str(hex_message)}
     }
     return payload
 
